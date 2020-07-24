@@ -1,0 +1,8 @@
+### Solucion 3.2
+
+¿Cuál de las siguientes piezas de información sobre un proceso son idénticas para un proceso padre y el proceso hijo recién creado, inmediatamente después de completar la llamada al sistema fork?:
+- El identificador del proceso.
+- El contenido de la tabla de descriptores de archivo.
+Explica tu respuesta.
+
+Seria decir que tiene algo identico *el contenido de la tabla de descriptores de archivos*, ya que el pid del hijo y pid del padre son distintos, en cambio el contenido de la tabla de descriptores de archivo es independiente a los cambios que puedan pasar los procesos padre e hijo, aunque el valor del pid padre tendria el valor del pid hijo en algun momento pero el pid del hijo tambien cambiaria.

@@ -1,0 +1,9 @@
+### Solucion 1.3
+
+¿Deberı́a haber un lı́mite en la cantidad de procesos que un usuario puede ejecutar simultáneamente?
+
+Si deberia haber un limite en la cantidad de procesos ya que se puede saturar las ejecuciones de los procesos, ademas de fallos como falta de memoria o fallas de interrupciones, recordemos que los procesos pueden tener diferentes tamaños y distintas complejidades a la hora de estar ejecutandose, es por eso, una forma de limitar al usuario seria que los administradores deberian controlar el acceso a los recursos y dar una serie de reglas o control aplicado, de esta forma se lograria un control en la cantidad de procesos. Como medidas de control adicionales se podria prestar servicios que este relacionado con el consumo de recursos siempre y cuando los registros de actividad y los logs esten almacenados en un sistema de ficheros dimensionada especialmente para limitar la cantidad de procesos ejecutados simultaneamente haciendo que las conexiones de red puedan atender el tiempo maximo posible sin tener que depender demasiado del administrador. Si se logra un limite correcto en la cantidad de procesos entonces:
+
+* Las carpetas de compartimiento de ficheros o aplicaciones, emplearian unidades logicas diferentes al de los usuarios.
+* Se emplearian sistemas de cuotas de discos que limitaria el espacio que tienen disponibles los usuarios para poder limitar y optimizar el espacio que los usuarios pueden consumir.
+* Mediante un proceso automatico o manual, se revisarian codigos maliciosos o aplicaciones ilegales, etc.

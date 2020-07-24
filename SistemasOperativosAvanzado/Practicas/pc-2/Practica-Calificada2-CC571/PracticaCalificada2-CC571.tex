@@ -1,0 +1,180 @@
+% !TEX encoding = IsoLatin
+\documentclass[11pt,a4paper]{article}
+%\usepackage[utf8x]{inputenc}
+\usepackage[sc]{mathpazo}
+\usepackage[cache=false]{minted}
+%\usepackage[latin1]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{verbatim}
+\usepackage{graphicx,color,wrapfig}
+\usepackage{psfrag}
+\usepackage[all]{xy}
+\usepackage{tikz}
+%\includepackage{mathabx}
+\usepackage{hyperref}
+\synctex=1
+\usepackage{srcltx}
+%\hypersetup{colorlinks=true,linkcolor=blue}
+
+\sloppy
+\usepackage{multicol}
+\setlength{\topmargin}{-0.75in}
+\setlength{\textheight}{9.85in}
+\setlength{\oddsidemargin}{-0.3in}
+\setlength{\evensidemargin}{-0.3in}
+\setlength{\textwidth}{6.6in}
+
+\def\R{\mathbb R}
+\def\Q{\mathbb Q}
+\def\N{\mathbb N}
+
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{type1cm}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{forloop}
+
+\newcounter{ber}
+\newcounter{num}
+
+\newcommand{\lef}{\langle}
+\newcommand{\rig}{\rangle}
+
+\makeatletter
+%\AddToShipoutPicture{
+%\forloop{num}{1}{\value{num} < 7}{
+%  \setlength{\@tempdimb}{0.2\paperwidth}
+%  \setlength{\@tempdimc}{-1.5\paperheight}
+%  \addtolength{\@tempdimc}{\value{num}\paperheight/7*4}
+%  \setlength{\unitlength}{.5pt}
+%  \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){
+%     \makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.85}
+%     {\fontsize{2cm}{2cm}\selectfont{  Introducci\'on a la Programaci\'on  \forloop{ber}{1}{\value{ber} < 15}{\qquad Introducci\'on a la Programaci\'on UNI}  }}}}}}}
+\makeatother
+%%%%%%%%%%%% fin del sello de agua
+
+
+\begin{document}
+
+\begin{center}
+\begin{figure}[ht!]
+\begin{minipage}[c]{0.2\linewidth}
+\includegraphics[scale=0.25]{EscudoUNI.eps}
+\end{minipage}
+\hfill{}
+\begin{minipage}{0,8\columnwidth}
+\centering\flushleft {\large\bf Universidad Nacional de Ingenier\'ia\\
+Facultad de Ciencias\\
+Escuela Profesional de Ciencia de la Computaci\'on\\
+Sistemas Operativos Avanzados (CC-571)\\
+Ciclo: 2020-I}
+\end{minipage}
+\end{figure}
+\end{center}
+\vspace*{-0.50cm}
+\noindent
+
+\begin{center}
+\textbf{\Large Segunda pr\'actica calificada}
+\end{center}
+\noindent
+\rule{\textwidth}{2pt}
+\newline
+
+\textbf{Normas}
+
+\begin{itemize}
+	\item Presentar cada una de sus respuestas en un archivo separado. Los archivos separados tendran el nombre de  soluci\'on1.c o  soluci\'on2.mkd si es que es la respuesta es texto.
+	
+	\item En las respuestas de texto se tomar\'a en cuenta la ortograf\'ia y la sem\'antica de las soluciones.
+	\item Todos los programas deben presentar pruebas de ejecuci\'on ya sea a trav\'es de im\'agenes o de video. Las respuestas sin ejecuci\'on ser\'an calificados con $0$.
+	
+	\item La entrega es en un archivo comprimido. 
+	
+	\item No se admiten copias. \textbf{Cualquier evidencia de copia de otra fuente no ser\'an consideradas y el puntaje ser\'a cero}.
+	
+\end{itemize}
+
+\textbf{Preguntas}
+
+\begin{enumerate}
+	\item Considera un sistema que implementa la planificaci\'on de colas multinivel. \textquestiondown Qu\'e estrategia puede utilizar una computadora para maximizar la cantidad de tiempo de CPU asignado al proceso del usuario? ¿Qu\'e pasa si el sistema implementa round-robin?.
+
+\item El tama\~no de p\'agina en un sistema (que ejecuta un sistema operativo similar a Linux en hardware x86) se incrementa manteniendo todo lo dem\'as (incluido el tama\~no total de la memoria principal) igual. Para cada una de las siguientes m\'etricas, indica si generalmente se espera que la m\'etrica aumente, disminuya o no cambie como resultado de este aumento en el tama\~no de la p\'agina:
+
+\begin{enumerate}
+	\item Tama\~no de la tabla de p\'aginas de un proceso 
+	\item Tasa de aciertos (hits) de TLB 
+	\item Fragmentaci\'on interna de la memoria principal.
+	
+\end{enumerate}
+\item Discute c\'omo los siguientes pares de criterios de planificaci\'on entran en conflicto en ciertos entornos.
+
+\begin{enumerate}
+\item Uso de CPU y tiempo de respuesta
+
+\item Tiempo de entrega promedio (TAT) y el tiempo de espera m\'aximo
+
+\item utilizaci\'on de dispositivos de E/S y utilizaci\'on de CPU.
+\end{enumerate}
+
+\item Considera un proceso con $4$ p\'aginas l\'ogicas, numeradas del $0$ al $3$. La tabla de p\'aginas del proceso consta de las siguientes asignaciones de n\'umeros de p\'aginas l\'ogicas a n\'umeros de trama f\'isica: $(0, 11), (1, 35), (2, 3), (3, 1)$. El proceso se ejecuta en un sistema con direcciones virtuales de $16$ bits y un tama\~no de p\'agina de 256 bytes. Se  garantiza que este proceso accede a la direcci\'on virtual $770$. Responde las siguientes preguntas, mostrando los c\'alculos adecuados.
+
+\begin{enumerate}
+\item \textquestiondown A qu\'e n\'umero de p\'agina l\'ogica corresponde esta direcci\'on virtual?
+
+\item \textquestiondown A qu\'e direcci\'on f\'isica se traduce esta direcci\'on virtual?
+
+\end{enumerate}
+\item Proporciona una ventaja de usar el asignador slab en Linux para asignar objetos del kernel, en lugar de simplemente asignarlos desde un heap de memoria din\'amica.
+
+\item Considera un sistema simple que ejecuta un solo proceso. El tama\~no de los marcos f\'isicos y las p\'aginas l\'ogicas es de $16$ bytes. La RAM puede contener $3$ marcos f\'isicos. Las direcciones virtuales del proceso tienen un tama\~no de $6$ bits. El programa genera las siguientes $20$ referencias de direcciones virtuales a medida que se ejecuta en la CPU: $0, 1, 20, 2, 20, 21, 32, 31, 0, 60, 0, 0, 16, 1, 17, 18, 32, 31, 0, 61$. (Nota: las direcciones de $6$ bits se muestran en decimal aqu\'i.) Suponga que los marcos f\'isicos en la RAM est\'an inicialmente vac\'ias y no se asignan a ninguna p\'agina l\'ogica.
+
+\begin{enumerate}
+\item Traduzca las direcciones virtuales anteriores a n\'umeros de p\'agina l\'ogicos a los que hace referencia el proceso. Es decir, anote la cadena de referencia de 20 n\'umeros de p\'agina correspondientes a los accesos de direcciones virtuales anteriores. Supongamos que las p\'aginas est\'an numeradas a partir de $0, 1, \dots$
+
+\item Calcula el n\'umero de fallas de p\'agina generadas por los accesos anteriores, suponiendo un algoritmo de reemplazo de p\'agina FIFO. Tambi\'en debes indicar correctamente qu\'e accesos de p\'agina en la cadena de referencia que muestra en la parte (a) son responsables de las fallas de la p\'agina.
+
+\item  Repite (b) para el algoritmo de reemplazo de p\'agina LRU.
+\item \textquestiondown Cu\'al ser\'ia el menor n\'umero de fallas de p\'agina alcanzables en este ejemplo, suponiendo que se utilizara un algoritmo de reemplazo de p\'agina \'optimo? Repite (b) para este algoritmo \'optimo.
+\end{enumerate}
+\item Considera un asignador de memoria que utiliza el algoritmo de asignaci\'on buddy para satisfacer las solicitudes de memoria. El asignador comienza con un heap de tama\~no $4$KB ($4096$ bytes). El programa de usuario realiza las siguientes solicitudes al asignador (todos los tama\~nos solicitados est\'an en bytes): \texttt{ptr1 = malloc (500); ptr2 = malloc (200); ptr3 = malloc (800); ptr4 = malloc (1500)}. Si el encabezado agregado por el asignador tiene menos de $10$ bytes de tama\~no. Puedes hacer cualquier suposici\'on sobre la implementaci\'on del algoritmo de asignaci\'on buddy que sea consistente con la descripci\'on en clase.
+
+\begin{enumerate}
+\item Dibuja una figura que muestre el estado del heap despu\'es de completar estas $4$ asignaciones. Tu figura debe mostrar qu\'e partes del heap est\'an asignadas y cu\'ales son libres, incluidos los tama\~nos de los diversos bloques asignados y libres.
+
+\item Ahora, supongamos que el programa de usuario libera asignaciones de memoria de \texttt{ptr2, ptr3} y \texttt{ptr4}. Dibuja una figura que muestre el estado del heap una vez m\'as, despu\'es de que se libere memoria y el algoritmo de asignaci\'on haya tenido la oportunidad de realizar cualquier posible coalescing.
+\end{enumerate}
+
+\item Considera un sistema con direcciones virtuales y f\'isicas de $8$ bits y p\'aginas de $16$ bytes. Un proceso en este sistema tiene $4$ p\'aginas l\'ogicas, que se asignan a $3$ p\'aginas f\'isicas de la siguiente manera: la p\'agina l\'ogica $0$ se asigna a la p\'agina f\'isica $6$, $1$ se asigna a $3$, $2$ se asigna a $11$ y la p\'agina l\'ogica $5$ no se asigna a ninguna p\'agina f\'isica todav\'ia. Todas las otras p\'aginas en el espacio de direcciones virtuales del proceso est\'an marcadas como inv\'alidas en la tabla de p\'aginas. La MMU recibe un puntero a esta tabla de p\'aginas para la traducci\'on de direcciones. Adem\'as, la MMU tiene una peque\~na cach\'e TLB que almacena dos entradas, para las p\'aginas l\'ogicas $0$ y $2$. Para cada direcci\'on virtual que se muestra a continuaci\'on, describe qu\'e sucede cuando la CPU accede a esa direcci\'on. Espec\'ificamente, debes responder lo que sucede en el TLB (\textquestiondown hit o miss?), MMU (\textquestiondown a qu\'e entrada de la tabla de p\'agina se accede?), SO (\textquestiondown hay alg\'un tipo de trap?) y la memoria f\'isica (\textquestiondown a qu\'e direcci\'on f\'isica se accede? ). Escribe la direcci\'on f\'isica traducida en formato binario. (Ten en cuenta que no est\'a impl\'icito que los accesos a continuaci\'on sucedan uno tras otro; debes resolver cada parte de la pregunta de forma independiente utilizando la informaci\'on proporcionada anteriormente).
+
+\begin{enumerate}
+	\item Direcci\'on virtual $7$
+\item Direcci\'on virtual $20$
+\item Direcci\'on virtual $70$
+\item Direcci\'on virtual $80$
+\end{enumerate}
+
+\item Resolver 
+
+\begin{enumerate}
+	\item En este ejercicio estudiamos la afinidad de cach\'e. Para hacer esto, necesitar\'as usar el indicador $-A$. Este indicador se puede utilizar para limitar en qu\'e CPU el planificador puede colocar un trabajo en particular. En este caso, lo debes usar para colocar los trabajos \texttt{b} y \texttt{c} en la CPU $1$, mientras restringimos \texttt{a} a la CPU $0$. Esto se logra al escribir como:
+	
+\begin{minted}{python}
+python multi.py -n 2 -L a: 100 : 100, b: 100: 50, c: 100: 50 -A
+		 a: 0, b: 1, c: 1;
+\end{minted}
+\textquestiondown Puedes predecir qu\'e tan r\'apido se ejecutar\'a esta versi\'on?. \textquestiondown Por qu\'e lo hace mejor?. \textquestiondown Qu\'e otras combinaciones de \texttt{a}, \texttt{b} y \texttt{c} en los dos procesadores funcionar\'an m\'as r\'apido o m\'as lento?. No olvides que en tus respuestas debes activar varias opciones de seguimiento para ver lo que realmente est\'a sucediendo y como se relaciona con la afinidad de cach\'e.
+
+\item Un aspecto interesante de los multiprocesadores de almacenamiento en cach\'e es la oportunidad de acelerar los trabajos mejor de lo esperado cuando se usan con m\'ultiples CPU (y sus cach\'es) en comparaci\'on con la ejecuci\'on de trabajos en un solo procesador. Espec\'ificamente, cuando se ejecuta en $N$ CPU, a veces puede acelerar m\'as de un factor de $N$, una situaci\'on denominada aceleraci\'on superlineal. 
+
+Para experimentar con esto, usa la descripci\'on del trabajo aqu\'i \texttt{(-L a: 100: 100, b: 100: 100, c: 100: 100)} con un peque\~no cach\'e \texttt{(-M 50)} para crear tres trabajos. Ejecuta esto en sistemas con $1$, $2$ y $3$ CPU \texttt{(-n 1, -n 2, -n 3)}. Ahora, haz lo mismo, pero con un cach\'e por CPU m\'as grande de tama\~no $100$. \textquestiondown Qu\'e observas sobre el rendimiento a medida que aumenta el n\'umero de CPU? Usa -c para confirmar sus conjeturas y otros indicadores para presentar mejor tu respuesta.
+\end{enumerate}
+\item Considera un proceso con $9$ p\'aginas l\'ogicas, de las cuales $3$ p\'aginas se asignan a marcos f\'isicos. El proceso accede a una de sus $9$ p\'aginas al azar. \textquestiondown Cu\'al es la probabilidad de que el acceso resulte en un hit de TLB y un error de p\'agina posterior?.
+ \end{enumerate}
+
+\end{document}

@@ -1,0 +1,14 @@
+### Solucion 4.2
+
+¿Qué hace las sentencias: clock gettime,CLOCK BOOTTIME CLOCK REALTIME en los dos primeros archivos.
+
+La sentencia *clok_gettime()* recuepran la hora de reloj especificado en *tiempo_1* y *tiempo_2* y para tomar el tiempo que demoro simplemente es la diferencia entre ellos dos, luego lo que hace el argumento *CLOCK_BOOTTIME* permite que las aplicaciones tengan un reloj monotonico con suspension, osea que este argumento considera la medicion de interrupciones o suspensiones, mientras que el argumento *CLOCK_REALTIME* es el reloj del sistema y mide el tiempo de real de ejecucion aunque puede ser sensible a los cambios que pueda hacer el administardor.
+
+¿Encuentra y explica algunas diferencias entre clock gettime, gettimeofday mencionada en clase.
+
+Una diferencia entre ellas es la funcion *clock_gettime* tiene una mayor variedad de argumentos que ayudan al tener una mejor precision dependiendo del problema que nos dan, ademas gettimeofday usa nanosegundos para la medicion, mientras *clock_gettime* usa microsegundos para la medicion de tiempo, gettimeofday depende mucho del sistema del hardware. Entre los argumentos mas importantes que *clock_gettime()* tiene estan:
+  * CLOCK_REALTIME.
+  * CLOCK_REALTIME_COARSE.
+  * CLOCK_MONOTONIC.
+  * CLOCK_MONOTONIC_COARSE.
+  * CLOCK_BOOTTIME.

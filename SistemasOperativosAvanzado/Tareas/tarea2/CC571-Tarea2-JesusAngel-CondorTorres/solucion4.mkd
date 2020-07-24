@@ -1,0 +1,13 @@
+###Solucion 4
+
+En esta pregunta nos piden los costos de cambio de contexto, yendo a la pagina que cita la pregunta, basicamente lo que se hace es medir los tiempos de ejecucion de los procesos habiendo una comunicacion entre ellos a traves de una tuberia, para lo cual el codigo de este problema utilizara las siguientes librerias:
+  * stdio.h: Libreria que ofrece funciones de entrada y salida para el programa, tiene otras funciones pero centrandonos en nuestro programa utilizamos esta libreria para usar las funciones de *printf*, *fprintf*, *stderr*.
+  * stdlib.h: Libreria que ofrece control sobre los procesos que se puedan generar en el codigo, por ejemplo en nuestro codigo tenemos la funcion *exit* que nos ayuda terminar la ejecucion de nuestro programa.
+  * unistd.h: Libreria que proporciona acceso al POSIX de linux, entre sus funciones mas importantes tenemos al *fork*, *pipe*, *dup2* y *close* refiriendonos al programa, estas nos ayudan para manipular nuestros procesos en el sistema.
+  * fcntl.h: Libreria que ayuda en la lectura y/o escritura de archivos a traves de constantes, como por ejemplo en nuestro programa lo utilizamos para leer un archivo a traves del comando *read*.
+  * errno.h: Libreria con uso de constantes que ayuda a nuestro programa a interrumpir la llamada al sistema si el proceso falla.
+  * string.h: Libreria que nos ayuda con la funcion *strlen* para la longitud del buffer.
+  * sys/wait.h: Libreria que nos ayuda con la funcion *wait*, la cual suspende un proceso hasta que su proceso hijo termine.
+  * sys/types.h: Libreria que nos ayuda con la declaracion de variable del tipo *pid_t*.
+
+El codigo es muy similar al del ejercicio 3 con la diferencia de que ahora ambos procesos estan procesando en paralelo hasta que finalice el proceso padre primero y termina con el hijo, claro eso en caso que los procesos que se comunican a traves de la tuberia estan realizandose correctamente, sino envia un mensaje de error y termina la ejecucion del programa, tanto ambas ejecuciones son medidas para ver cuanto demoro la ejecucion y si es factible el costo del proceso.

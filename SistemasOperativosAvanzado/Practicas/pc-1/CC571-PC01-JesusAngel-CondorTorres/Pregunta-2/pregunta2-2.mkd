@@ -1,0 +1,9 @@
+### Solucion 2.2
+
+¿Cuál es el valor de la variable a si se imprime en el proceso hijo, cuando se programa a continuación? Explica tu respuesta.
+
+Cuando se corre el programa si es que se imprime el el proceso hijo, eso quiere decir que la varible ret es igual a cero, lo que significa que el proceso hijo se creo exitosamente, por lo tanto el valor de a se sigue manteniendo en valor de 5 e imprime por consola el valor de 5.
+
+¿El intento de leer del descriptor de archivos tendrá éxito en el proceso hijo? Explica tu respuesta.
+
+Segun el programa dado, este en principio se inicia el entero a traves del comando open con el argumento O_RDONLY para que pueda leer el texto, luego despues en la condicional del hijo este entera ayuda en el despcriptor de archivos a traves del comado read, aunque no esta completo los argumentos de los comandos, yo diria que si se lograria leer el descriptor de archivos en el proceso hijo.

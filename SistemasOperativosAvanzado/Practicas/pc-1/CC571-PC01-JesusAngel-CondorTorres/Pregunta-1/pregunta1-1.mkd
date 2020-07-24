@@ -1,0 +1,17 @@
+### Solucion 1.1
+
+¿Qué es un registro, pila, heap, puntero de instrucciones, puntero de pila?
+
+
+* Un registro es basicamente una base de datos que tiene como fin almacenar las distintas operaciones que pueda hacer el sistema operativo, este registro en el sistema contiene informacion y configuraciones tanto en el hardware como en el software, por el cual influye mucho en las asociaciones de archivos y ficheros, estos registros son conservados en el sistema como *User.dat* o *System.dat*.
+
+* Las pilas en programacion son un tipo de estructura de datos llamadas **LIFO** *(Last In First Out)* en la cual hace dos operaciones las cuales son *insertar* y *extraer*, es una memoria reservada para un proceso o subproceso de ejecucion, su funcion generalmente es la de extraer el ultimo elemento que acaba de insertarse.
+
+* El heap es un tipo de estructura de datos en el cual se almacena los datos que se crean en la ejecucion de un programa, puede ser parcial o casi total el almacenamiento dentro del programa. Para su implementacion necesita de dos operaciones importantes las cuales son *peticion* y *liberacion de memoria*, este esquema se conoce como gestion explicita de memoria.
+
+* El puntero de instrucciones es un registro del procesador que indica su posicion en una secuencia de instrucciones. Este puntero puede contener la direccion de instruccion que se esta ejecutando o la direccion de la instruccion proxima a ejecutar, luego su contador se incrementa automaticamente con lo cual estas instrucciones son llamadas en secuencia desde la memoria.
+
+* El puntero de pila es una estructura de datos en la cual tiene como funciones:
+  - Insertar nuevos elementos en la pila a traves del comando **push**.
+  - Eliminar elementos de la pila a traves del comando **pop**.
+  Esto ayuda en el manejo del registro de la pila ya que este puntero alamacena la direccion de la ultima peticion del programa. 

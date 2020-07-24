@@ -1,0 +1,20 @@
+### Solucion 1.4
+
+¿Por qué es una buena idea separar el mecanismo de las polı́ticas?
+
+Segun lo entiendo yo, las politicas son como las reglas mientras el mecanismo son como el accionar, esto se basa principalmente en lo que es seguridad, por lo que una politica de seguridad es como un documento que define las directrices organizativas. Su implementacion se da a traves de mecanismos de seguridad, donde estos seran los encargados de la proteccion del sistema, los cuales estan divididos en:
+1. **Prevencion**: Evitan posibles desviaciones politicas de seguridad.
+2. **Deteccion**: Detectan las desviaciones que se producen ya sea por violaciones o un intento de ir contra la seguridad del sistema.
+3. **Recuperacion**: Esto se da cuando ha habido una violacion al sistema, a traves de las reglas establecidas esta sigue los protocolos para poder recuperar su normal funcionamiento.
+
+Tambien tenemos dentro de este grupo de mecanismos de seguridad:
+1. **Mecanismos de autenticacion**: Conocido tambien como *mecanismo de identificacion*, esta permite identificar los componentes del sistema de forma unica.
+2. **Mecanismos de control de acceso**: Protegen los objetos del sistema a traves del tipo de acceso por parte de cualquier entidad del sistema.
+3. **Mecanismos de separacion**: Para un sistema de distintos niveles de seguridad es necesario la implementacion de mecanismos que permitan separar los objetos dentro de cada nivel. Entre estos mecanismos de separacion tenemos:
+  * Separacion fisica.
+  * Separacion temporal.
+  * Separacion logica.
+  * Separacion criptografica.
+  * Separacion fragmentada.
+4. **Mecanismos de seguridad en comunicaciones**: Utiliza los protocolos seguro como el *ssh* o *kerberos*, los cuales cifran el como circula la red.
+

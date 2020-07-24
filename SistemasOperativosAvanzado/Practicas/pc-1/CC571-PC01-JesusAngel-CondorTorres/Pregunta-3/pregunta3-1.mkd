@@ -1,0 +1,10 @@
+### Solucion 3.1
+
+Considere los siguientes eventos que ocurren durante un cambio de contexto del (modo de usuario) proceso P al (modo de usuario) proceso Q, desencadenado por una interrupción del temporizador que ocurrió cuando P se estaba ejecutando, en un diseño de un OS tipo Unix. Organiza los eventos en orden cronológico, comenzando desde el primero al último. Explica tu respuesta.
+
+El orden cronologico que lleva este proceso seria de la siguiente manera:
+* (E) Se invoca el código del planificador del OS. (Planifica a traves de un algoritmo como sera el proceso que se quiere)
+* (C) El puntero de la pila de la CPU se mueve de la pila kernel de P a la pila kernel de Q. (El puntero del kernel P necesita ir a la pila kernel Q).
+* (B) El proceso de ejecución de la CPU P se mueve del modo de usuario al modo de kernel. (Una vez que el puntero de P esta en la pila de Q comienza a procesar dentro de Q).
+* (D) El contador del programa de la CPU se mueve del espacio de direcciones del kernel de Q al espacio de direcciones del usuario de Q. (Como el puntero de P esta procesando en Q el contador de Q necesita ir al espacio de usuario de q para que pueda el contador de P operar en Q).
+* (A) El contador del programa de la CPU se mueve del espacio de direcciones del kernel de P al espacio de direcciones del kernel de Q. (El contador de P se va al kernel de Q para que pueda operar).

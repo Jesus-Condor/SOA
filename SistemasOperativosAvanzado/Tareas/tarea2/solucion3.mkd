@@ -1,0 +1,17 @@
+###Solucion 3
+
+En esta pregunta se utiliza dos funciones, las cuales son la funcion estandar **STDOUT FILENO** y las diferentes funciones que pueden dar la funcion *printf*, primero comenzamos describiendo el codigo hecho con las librerias de cabecera, entre estas tenemos las siguientes:
+  * stdio.h: Libreria que ofrece funciones de entrada y salida para el programa, tiene otras funciones pero centrandonos en nuestro programa utilizamos esta libreria para usar las funciones de *printf*, *fprintf*, *stderr*.
+  * stdlib.h: Libreria que ofrece control sobre los procesos que se puedan generar en el codigo, por ejemplo en nuestro codigo tenemos la funcion *exit* que nos ayuda terminar la ejecucion de nuestro programa.
+  * unistd.h: Libreria que proporciona acceso al POSIX de linux, entre sus funciones mas importantes tenemos al *fork*, *pipe*, *dup2* y *close* refiriendonos al programa, estas nos ayudan para manipular nuestros procesos en el sistema.
+  * fcntl.h: Libreria que ayuda en la lectura y/o escritura de archivos a traves de constantes, como por ejemplo en nuestro programa lo utilizamos para leer un archivo a traves del comando *read*.
+  * errno.h: Libreria con uso de constantes que ayuda a nuestro programa a interrumpir la llamada al sistema si el proceso falla.
+  * string.h: Libreria que nos ayuda con la funcion *strlen* para la longitud del buffer.
+  * sys/wait.h: Libreria que nos ayuda con la funcion *wait*, la cual suspende un proceso hasta que su proceso hijo termine.
+  * sys/types.h: Libreria que nos ayuda con la declaracion de variable del tipo *pid_t*.
+
+El codigo comienza de la siguiente manera, primero declaramos nuestras variables, las cuales son 3 variables del tipo entero, una cadena de longitud 256, una variable lon del tipo unsigned y finalmente una variable del tipo pid_t llamada pid, luego a traves de la funcion fork() creamos un nuevo proceso, luego para ver un cierre de salida del proceso hijo (nuevo proceso), iniciamos una tuberia a traves del comando pipe(), esto con la idea de que se pueda manipular tanto el proceso padre como el proceso hijo en "paralelo" o al menos asi lo entiendo, luego a traves de un Switch al pid le damos las siguientes opciones:
+
+1. Si en el caso que pid = -1, entonces ha ocurrido un error en la creacion del nuevo proceso por lo que envia un mensaje de error a traves de *fprintf* con la ayuda de *stderr* que busca una salida de error.
+2. Si en el caso que pid = 0, eso quiere decir que la creacion del nuevo proceso ha sido exitosa y por lo tanto se da el cierre de salida del proceso a traves de *STDOUT_FILENO* y finaliza el proceso con *close* generando un duplicado de datos que hace el proceso hijo para que mas adelante sean imprimidos por los comandos fprintf y sprintf, finalmente se verifica si hay un error en la escritura y termina la ejecucion.
+3. Si en el caso que pid fue a la opcion de default, esta se encontrara con el proceso padre donde una vez que identifica el proceso padre esta cierra el proceso y comienza imprimir todas veces que ejecuto, despues verifica si hubo un trabajo paralelo con el proceso hijo a traves de la sentencia while, en caso que no hubiese comunicacion entre ellos manda un mensaje de error de lectura y termina el proceso. 

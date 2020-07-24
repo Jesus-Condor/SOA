@@ -1,0 +1,8 @@
+### Solucion 1.6
+
+¿Cómo dificulta la ejecución directa que el OS cambie entre procesos?. ¿Cómo resuelve el OS este problema?
+
+Se dificulta cuando un programa no tiene  control o supervision del usuario o tambien cuando se realizan tareas repetitivas sobre grandes cantidades de informacion, esto genera tediosidad y errores en la ejecucion directa. Para resolver este problema abarquemos el tema de gestion de procesos la cual es una parte integral de todo sistema operativo, esta gestion de procesos permite que los procesos puedan compartir e intercambiar datos, informacion, etc, ademas de estar protegiendo los recursos del sistema y ocuparse de la sincronizacion entre los procesos, esto incluye el patron de entrelazado para asignacion y ejecucion de los procesos. Su modelo mas simple que puede darse cuenta si una ejecucion estuvo correcta o no, lo que genera dos operaciones: *running* o *stop*. donde se va almacenando en una cola hasta que vuelva ser usado mientras que la parte de envio del sistema operativo seleccionara la cola en la cual no se ejecutan los procesos con las siguientes caracteristicas:
+
+* necesidad de identificar y realizar un seguimiento a cada proceso.
+* Puesta en cola de running.

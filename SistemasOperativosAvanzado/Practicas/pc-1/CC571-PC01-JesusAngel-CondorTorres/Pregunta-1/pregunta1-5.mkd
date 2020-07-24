@@ -1,0 +1,11 @@
+### Solucion 1.5
+
+Muestra el PCB de Linux
+
+PCB: "Proccess Control Block", es una estructura de datos que se encuentra en el nucleo del sistema operativo, en el kernel de Linux todo proceso esta representado por un *task struct* donde los procesos se van almacenando en una lista con el encabezado *init_task* formando una tabla de procesos que se encuentran en el directorio de */proc* (tabla visible para los usuarios), estas tablas tienen las siguientes caracteristicas:
+
+* Los datos de identificacion del proceso (PID) se encuentran en la direccion */proc/PID/* ademas de otras lineas de comandos y posibles atributos que ayuden con la identificacion.
+* Los datos del estado de uno o mas procesos contienen datos de programacion como *sched*, *stat* y *schedstat*, tambien *wchan* y *environt* que maneja el entorno entre muchos otros mas.
+* Los datos de control de procesos y los limites de recursos los cuales son identificados con *uid_map* y *limits*.
+
+Se deja una imagen de la direccion de ruta */proc/<PID>/* donde se pueden visualizar algunos numeros de identificacion los cuales son los procesos de identificacion.

@@ -1,0 +1,16 @@
+###Solucion 1
+
+En la pregunta 1 se quiere saber 2 preguntas basicamente, la primera es ver mediante codigo el funcionamiento de todas las funciones **exec** como por ejemplo *execl*, *execv* entre otras mas; y la segunda pregunta es porque existe diferencias entre las diferentes llamadas de **exec**, contestando la primera pregunta explicamos el codigo **solucion1.c** en los siguientes pasos:
+
+1. En la primera parte declaramos las librerias que utilizaremos tales como **stdio.h** para la entrada y salida por consola, como por ejemplo nos ayuda a con la funcion *fprintf*, tambien esta la libreria **stdlib.h** para ayudarnos con la funcion *exit()* que tiene el proposito de parar si el pid tuvo un error o si fue un exito, luego tenemos la libreria **unistd.h** que nos ayuda con las funciones *pid_t*, *fork()* y *exec* que son parte de la creacion de procesos, la libreria **sys/types** nos ayuda a mostrar informacion sobre los procesos que se ejecutan.
+
+2. La segunda parte consiste en la descripcion del codigo, primero declaramos nuestras variables pid para la creacion de nuevos procesos, luego declaramos una cadena del tipo puntero para poder utilizar las diferentes funciones de exec, luego declaramos una variable del tipo entero llamada *status* que se encarga de ver si el proceso hijo se ejecuta correctamente.
+
+3. Una vez que crea un proceso a traves de la funcion *fork()* verificamos que es lo que esta haciendo el proceso, para eso utilizamos la funcion **switch** donde damos 3 opciones, la primera es para verificar si ocurrio un fallo en la creacion del proceso, esta envia un aviso de error en la funcion fork(), luego la segunda opcion ocurre si se dio un proceso hijo correcto la cual inmediatamente despues hacemos usar las diferentes funciones de exec las cuales se guian de diferentes argumentos, algunas incluso son llamadas implicitamente.
+ 
+    * execvp: Toma como argumento a **ls** para luego ejecutarla en el entorno del proceso del creado, si esta mal mandara un valor de -1. 
+    * execvpe: Toma como argumento a **ls** y toma el nombre del programa a ejecutar en el pathname en un entorno **envp argument**.
+    * execv: Solo el toma  el argumento como un array y lo ejecuta en el proceso.
+    * exelp: El argumento tomado pasa como una lista y ejeucta el archivo en base a lo que especifique el sistema en PATH variable.
+    * exele: El argumento tomado pasa a ser una lista en un entorno *env argument*.
+    * exel: El argumento es tomado como lista y ejecuta el proceso.	

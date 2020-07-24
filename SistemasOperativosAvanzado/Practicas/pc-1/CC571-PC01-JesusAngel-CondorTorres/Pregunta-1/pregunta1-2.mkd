@@ -1,0 +1,10 @@
+### Solucion 1.2
+
+¿Qué proporciona el tiempo compartido a la virtualización?
+
+El tiempo compartido es un recurso en computacion (sobretodo en la programacion) en el que el tiempo de ejecucion en la maquina puede compartirse de forma concurrente, esto se logra gracias a la multiprogramacion y las interrupciones de parte del sistema operativo, esto ayuda a muchos usuarios a trabajar coactivamente haciendo que el proceso total sea lo mas eficiente posible. En el entorno de virtualizacion el tiempo compartido permite ejecutar diversos sistemas operativos en un unico servidor fisico, lo que permite que los recursos disponibles esten a disposicion de los usuarios sea cual sea el sistema operativo que opera, el tiempo compartido en la virtualizacion puede proporcionar lo siguiente:
+
+1. **Encapsulacion**: Encapsula en paquete de software todo lo tiene que ver con el sistema virtual como el hardware virtual, sistema operativo en uso y todas las aplicaciones que este sistema puede poseer.
+2. **Aislamiento**: A pesar que las maquinas virtuales (VM) puedan compartir los mismos recursos de un mimso servidor fisico, estas son totalmente independientes de otras maquinas, lo cual se les da el termino de aisladas.
+3. **Compatibilidad**: Esto da como caracteristica a la maquina virtual que puede contener las mismas caracteristicas de una maquina fisica, lo cual lo hace compatible con los sistemas operativos que se usen asi como sus aplicaciones.
+4. **Independencia**: Como se dijo cada maquina virtual tiene una independencia de las otras maquinas a pesar que pueden compartir recursos, esto es casi como una regla, sea cual sea el sistema operativo qie se usa.

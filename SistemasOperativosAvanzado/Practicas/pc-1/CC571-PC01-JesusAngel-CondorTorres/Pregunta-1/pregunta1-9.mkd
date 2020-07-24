@@ -1,0 +1,16 @@
+### Solucion 1.9
+
+¿Cómo mejora SJF sobre FIFO?
+
+SJF (Shortest-Job-First) es un tipo de algoritmo que se maneja a partir del ciclo de vida de uno o mas procesos, las cuales los divide en dos etapas, la primera tiene que ver con los ciclos de la CPU, mientras que el segundo tiene que ver con los ciclos de E/S (ciclos rafagas). Como su algoritmo tiene como idea escoger de entre todos los procesos listos, el que tenga un ciclo de CPU mas pequeño, entonces puede comportarse de dos formas:
+
+1. Con Desalojo: Esto ocurre cuando se incorpora un nuevo proceso a la cola de listas, y este nuevo proceso tiene un ciclo de CPU menor al que se esta ejecutando, eso provocaria que ese proceso que se estaba ejecutando se interrumpido y comenzaria a ejecutarse el nuevo proceso.
+2. Sin desalojo: Esto ocurre cuando el proceso toma la CPU haciendo que ningun otro proceso pueda apropiarse de la CPU hasta que termine su ejecucion.
+
+Sus caractrisiticas mas resaltantes son:
+* El proceso con la rafaga de CPU mas corta entra en ejecucion.
+* Minimiza el tiempo promedio debido a que la prioridad a los procesos cortos.
+* Riesgo de no poder ejecutar procesos largos.
+* Se pueden estimar las duraciones de los procesos.
+* El proceso en el CPU es desalojado si llega a la cola otro proceso de corta duracion.
+ 

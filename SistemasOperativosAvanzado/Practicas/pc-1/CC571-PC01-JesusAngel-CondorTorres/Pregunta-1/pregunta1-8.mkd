@@ -1,0 +1,11 @@
+### Solucion 1.8
+
+¿Qué hace el planificador (en términos simples)?
+
+El planificador es un conjunto de politicas y mecanismos que estan dentro del sistema operativo, estas manejan el orden de las ejecuciones de los procesos, tiene como funcion aparte realizar un uso eficiente de la CPU, las cuales la realiza al momento de tomar las decisiones de planificacion, entre ellas tenemos:
+
+* Creacion de un nuevo proceso: Se trata de una planificacion ya que se necesita dicidir si va a ejecutar el proceso padre o el proceso hijo, el planificador tiene que elegir.
+* Culminacion de un proceso: Cuando un proceso finaliza esta ya no se sigue ejecutandose, por lo cual el planificador tiene que elegir algun proceso de todos los proceso que ya estan listos para ejecutarse. En el caso que no hubiera un proceso listo este planificador pone por default un proceso "ocioso".
+* Cuando un proceso bloquea E/S: Ocurre cuando el planificador tiene la opcion de elegir la ejecucion de procesos segun cual puede ser su urgencia o sino su jerarquia, sin embargo, por lo general este planificador no cuenta con la informacion necesaria para tomr en cuenta la dependencia entre esos procesos.
+* Cuando tiene un lugar una interrupcion en E/S: Corresponde al planificador decidir si un nuevo proceso esta preparado para ejecutarse o si debe continuar el proceso que se estaba ejcutando.
+
