@@ -1,0 +1,9 @@
+### Pregunta 10
+
+Considera un proceso con 9 páginas lógicas, de las cuales 3 páginas se asignan a marcos fı́sicos. El proceso accede a una de sus 9 páginas al azar. ¿Cuál es la probabilidad de que el acceso resulte en un hit de TLB y un error de página posterior?.
+
+Cuando una pagina esta en un marco de pagina esta tiene una alta probabilidad de que no tenga un error de pagina y pueda ser atendida su petición, mientras que uno que no esta en un marco de pagina si podría tener un error de pagina, nos piden la probabilidad de que el acceso resulte en un hit y un error de pagina posterior, la probabilidad de que suceda eso se calcula de la siguiente manera:
+
+![](/home/jesus/Escritorio/SistemasOperativosAvanzado/Practicas/pc-2/Practica-Calificada2-CC571/pregunta-10/pregunta10.png)
+
+Nota: Profesor, si usted quiere ver las imagenes lo dejo en la carpeta del archivo de la pregunta, entodo caso si lo hace a traves del haroopad, entonces tendria que cambiar la direccion de donde se encuentra la imagen para que pueda observar bien el resultado que obtuve.

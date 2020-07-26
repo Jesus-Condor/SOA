@@ -1,0 +1,7 @@
+### Pregunta 9.a
+
+En este ejercicio estudiamos la afinidad de caché. Para hacer esto, necesitarás usar el indicador − A. Este indicador se puede utilizar para limitar en qué CPU el planificador puede colocar un trabajo en particular. En este caso, lo debes usar para colocar los trabajos b y c en la CPU 1, mientras restringimos a a la CPU 0. Esto se logra al escribir como:
+python multi.py -n 2 -L a: 100 : 100, b: 100: 50, c: 100: 50 -A a: 0, b: 1, c: 1;
+¿Puedes predecir qué tan rápido se ejecutará esta versión?. ¿Por qué lo hace mejor?. ¿Qué otras combinaciones de a, b y c en los dos procesadores funcionarán más rápido o más lento?. No olvides que en tus respuestas debes activar varias opciones de seguimiento para ver lo que realmente está sucediendo y como se relaciona con la afinidad de caché.
+
+El programa tiene una ejecucion muy rapida, esto se debe a que la distribucion de los trabajos es el mas optimo posible debido a que los trabajos b y c tienen una simteria en la carga de sus trabajos, si los trabajos fueran de diferentes carga esto haria muy posible un tiempo adicional mas que cuando son iguales las cargas, lo que haria que el funcionamiento se haga mas lento, luego con el comando **-A** podemos hacer que la afinidad de los trabajos a la CPU sea mas lo mas eficiente posible.

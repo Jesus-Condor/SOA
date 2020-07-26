@@ -1,0 +1,14 @@
+### Pregunta 7
+
+Considera un asignador de memoria que utiliza el algoritmo de asignación buddy para satisfacer las solicitudes de memoria. El asignador comienza con un heap de tamaño 4KB (4096 bytes). El programa de usuario realiza las siguientes solicitudes al asignador (todos los tamaños solicitados están en bytes): ptr1 = malloc (500); ptr2 = malloc (200); ptr3 = malloc (800); ptr4 = malloc (1500). Si el encabezado agregado por el asignador tiene menos de 10 bytes de tamaño. Puedes hacer cualquier suposición sobre la implementación del algoritmo de asignación buddy que sea consistente con la descripción en clase.
+
+1. Dibuja una figura que muestre el estado del heap después de completar estas 4 asignaciones. Tu figura debe mostrar qué partes del heap están asignadas y cuáles son libres, incluidos los tamaños de los diversos bloques asignados y libres.
+2. Ahora, supongamos que el programa de usuario libera asignaciones de memoria de ptr2, ptr3 y ptr4. Dibuja una figura que muestre el estado del heap una vez más, después de que se libere memoria y el algoritmo de asignación haya tenido la oportunidad de realizar cualquier posible coalescing.
+
+* Para el item **a** mostramos la respuesta en la siguiente imagen:
+![](/home/jesus/Escritorio/SistemasOperativosAvanzado/Practicas/pc-2/Practica-Calificada2-CC571/pregunta7a.png)
+
+* Para el item **b** mostramos la respuesta en la siguiente imagen:
+![](/home/jesus/Escritorio/SistemasOperativosAvanzado/Practicas/pc-2/Practica-Calificada2-CC571/pregunta7b.png)
+
+Nota: Profesor, si usted quiere ver las imagenes lo dejo en la carpeta del archivo de la pregunta, entodo caso si lo hace a traves del haroopad, entonces tendria que cambiar la direccion de donde se encuentra la imagen para que pueda observar bien el resultado que obtuve.

@@ -1,0 +1,13 @@
+### Pregunta 3
+
+Discute cómo los siguientes pares de criterios de planificación entran en conflicto en ciertos entornos.
+
+1. Uso de CPU y tiempo de respuesta
+2. Tiempo de entrega promedio (TAT) y el tiempo de espera máximo
+3. Utilización de dispositivos de E/S y utilización de CPU.
+
+* Con respecto al uso de CPU y el tiempo de respuesta, primeramente el tiempo de CPU es el tiempo en tarda en ejecutarse un programa sin tomar en cuenta el tiempo de espera de E/S, mientras que el tiempo de respuesta es el tiempo necesario para completar una tarea, esto incluye los accesos al disco, memoria, actividades de E/S y los gastos del sistema operativo. Los conflicto pueden surgir cuando hay un mal funcionamiento del CPU y sus tiempos de ejecucion pueden tardar mas de lo esperado y haria que el tiempo de respuesta tenga retarso en ejecutarse o sino puede surgir una carrera por los recursos del sistema entre otras opciones mas.
+
+* Con respecto al tiempo de entrega promedio es el promedio de tiempo que puede demorar cada uno de los procesos en su trabajo, mientras que el tiempo de espera maximo es el tiempo maximo que puede ejecutar un proceso, estos tiempos generalmente estan sujetos a los algoritmos de planificacion donde debido a su diferentes metodos que existe, puede haber casos en el TAT sea mucho mejor opcion que el tiempo de espera maximo, por eso, los conflictos pueden surgir a partir de que metodo de algoritmo de planificacion se utilice.
+
+* Con respecto a la utilizacion de dispositivos de E/S son aquellos que permite al usuario el manejo de operaciones ya que permiten ingresar datos y proporcionan comandos para poder manipular, los conflictos que pueden surgir con la utilizacion del CPU, suele ser el problema con los buffers, por ejemplo, cuando el dispositivo de E/S interrumpe la operacion del CPU, esto genera problema en la operacion que realiza el CPU, una solucion para este tipo de conflicto es el uso de interrupciones, ya que con esto cuando un dispositivo de E/S acaba una operacion interrumpe a la CPU y este ultimo detiene lo que esta haciendo y transfiere el control a una posicion determinada.

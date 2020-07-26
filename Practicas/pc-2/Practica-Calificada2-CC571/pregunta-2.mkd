@@ -1,0 +1,14 @@
+### Pregunta 2
+
+El tamaño de página en un sistema (que ejecuta un sistema operativo similar a Linux en hardware x86) se incrementa manteniendo todo lo demás (incluido el tamaño total de la memoria principal) igual. Para cada una de las siguientes métricas, indica si generalmente se espera que la métrica aumente, disminuya o no cambie como resultado de este aumento en el tamaño de la página:
+
+1. Tamaño de la tabla de páginas de un proceso.
+2. Tasa de aciertos (hits) de TLB.
+3. Fragmentación interna de la memoria principal.
+
+
+* Con respecto al tamaño de la tabla de paginas, si el tamaño de pagina aumenta, entonces el numero de paginas disminuye dado a que este se calcula como el cociente entre el tamaño total y el tamaño de pagina, luego  el numero de paginas es proporcional a tamaño de la tabla de paginas, por lo tanto el tamaño de la tabla de paginas disminuye.
+
+* La tasa de aciertos de refiere al contenido de la direccion que se encuentra en un bloque de la linea cache, como esta se dirige hacia la direccion y no al tamaño de la pagina, entonces por el cual podemos intuir que si el tamaño de pagina se incrementa, la tasa de aciertos no disminuiria o aumentaria, por lo tanto el resultado no cambia.
+
+* Con respecto a la fragmentacion interna de la memoria principal, esta es la perdida de espacio en el disco al hecho de que un tamaño de un archivo que ocupa en la memoria sea menor al tamaño del cluster, como en este caso el tamaño de pagina esta aumentando entonces este necesitara mas espacio de memoria por lo cual perdera mas espacio de memoria, por lo cual la fragmentacion interna aumentara.

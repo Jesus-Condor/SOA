@@ -1,0 +1,12 @@
+### Pregunta 4
+
+Considera un proceso con 4 páginas lógicas, numeradas del 0 al 3. La tabla de páginas del proceso consta de las siguientes asignaciones de números de páginas lógicas a números de trama fı́sica: ( 0, 11 ) , ( 1, 35 ) , ( 2, 3 ) , ( 3, 1 ) . El proceso se ejecuta en un sistema con direcciones virtuales de 16 bits y un tamaño de página de 256 bytes. Se garantiza que este proceso accede a la dirección virtual 770. Responde las siguientes preguntas, mostrando los cálculos adecuados.
+1. ¿A qué número de página lógica corresponde esta dirección virtual?
+2. ¿A qué dirección fı́sica se traduce esta dirección virtual?
+
+* Primero hallemos el formato de direccion virtual y luego fisica, en la siguiente imagen vemos el procedimiento de resolucion de la pregunta:
+
+![](/home/jesus/Escritorio/SistemasOperativosAvanzado/Practicas/pc-2/Practica-Calificada2-CC571/pregunta-4/pregunta4.png)
+
+Nota: Profesor, si usted quiere ver las imagenes lo dejo en la carpeta del archivo de la pregunta, entodo caso si lo hace a traves del haroopad, entonces tendria que cambiar la direccion de donde se encuentra la imagen para que pueda observar bien el resultado que obtuve.
+

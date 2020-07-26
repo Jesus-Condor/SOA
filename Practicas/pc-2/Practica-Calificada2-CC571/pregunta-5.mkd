@@ -1,0 +1,8 @@
+### Pregunta 5
+
+Proporciona una ventaja de usar el asignador slab en Linux para asignar objetos del kernel, en lugar de simplemente asignarlos desde un heap de memoria dinámica.
+
+El asignador **slab linux** es una region de memoria de una o mas paginas que se encuentra en la cache, esta mantiene o incrementa el rendimiento del proceso, su tamaño es multiplo de la tabla de pagina, debido a que esta en la cache, tiene una mejor velocidad de operacion a comparacion del kernel, lo que lo hace muy rapido, tambien puede dar las siguientes ventajas:
+
+* No hay perdidas de espacio.
+* Añadir espacio para la cache es como añadir una nueva zona de slab.
